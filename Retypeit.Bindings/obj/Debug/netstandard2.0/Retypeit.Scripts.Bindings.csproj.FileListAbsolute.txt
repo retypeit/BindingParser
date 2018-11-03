@@ -1,0 +1,9 @@
+C:\code\BindingParser\Retypeit.Bindings\bin\Debug\netstandard2.0\Retypeit.Scripts.Bindings.deps.json
+C:\code\BindingParser\Retypeit.Bindings\bin\Debug\netstandard2.0\Retypeit.Scripts.Bindings.dll
+C:\code\BindingParser\Retypeit.Bindings\bin\Debug\netstandard2.0\Retypeit.Scripts.Bindings.pdb
+C:\code\BindingParser\Retypeit.Bindings\obj\Debug\netstandard2.0\Retypeit.Scripts.Bindings.csprojAssemblyReference.cache
+C:\code\BindingParser\Retypeit.Bindings\obj\Debug\netstandard2.0\Retypeit.Scripts.Bindings.csproj.CoreCompileInputs.cache
+C:\code\BindingParser\Retypeit.Bindings\obj\Debug\netstandard2.0\Retypeit.Scripts.Bindings.AssemblyInfoInputs.cache
+C:\code\BindingParser\Retypeit.Bindings\obj\Debug\netstandard2.0\Retypeit.Scripts.Bindings.AssemblyInfo.cs
+C:\code\BindingParser\Retypeit.Bindings\obj\Debug\netstandard2.0\Retypeit.Scripts.Bindings.dll
+C:\code\BindingParser\Retypeit.Bindings\obj\Debug\netstandard2.0\Retypeit.Scripts.Bindings.pdb

@@ -1,0 +1,33 @@
+namespace Retypeit.Scripts.Bindings.Lexer
+{
+    public enum TokenTypes
+    {
+        LeftParentheses,
+        RightParentheses,
+        Integer,
+        Decimal,
+        String,
+        Char,
+        Identity,
+        LeftBracket,
+        RightBracket,
+        Comma,
+        QuestionMark,
+        Colon,
+        Equal,
+        NotEqual,
+        Minus,
+        Plus,
+        Times,
+        Divide,
+        Eof,
+        TextBlock,
+        DefaultNullValue,
+        DefaultUndefinedOrNullValue,
+        Null,
+        GreaterThan,
+        LessThan,
+        True,
+        False
+    }
+}
