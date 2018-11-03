@@ -1,9 +1,0 @@
-Y:\github\BindingParser\BindingParser\obj\Debug\netstandard2.0\Retypeit.BindingResolver.csprojAssemblyReference.cache
-Y:\github\BindingParser\BindingParser\obj\Debug\netstandard2.0\Retypeit.BindingResolver.csproj.CoreCompileInputs.cache
-Y:\github\BindingParser\BindingParser\obj\Debug\netstandard2.0\Retypeit.BindingResolver.AssemblyInfoInputs.cache
-Y:\github\BindingParser\BindingParser\obj\Debug\netstandard2.0\Retypeit.BindingResolver.AssemblyInfo.cs
-Y:\github\BindingParser\BindingParser\bin\Debug\netstandard2.0\Retypeit.BindingResolver.deps.json
-Y:\github\BindingParser\BindingParser\bin\Debug\netstandard2.0\Retypeit.BindingResolver.dll
-Y:\github\BindingParser\BindingParser\bin\Debug\netstandard2.0\Retypeit.BindingResolver.pdb
-Y:\github\BindingParser\BindingParser\obj\Debug\netstandard2.0\Retypeit.BindingResolver.dll
-Y:\github\BindingParser\BindingParser\obj\Debug\netstandard2.0\Retypeit.BindingResolver.pdb
