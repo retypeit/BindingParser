@@ -34,7 +34,7 @@ namespace Retypeit.Scripts.Bindings.Parser
                     program = currInstr;
             }
 
-            return new AstRoot(program);
+            return new AstRoot(program ?? new EmptyNode());
         }
 
         private bool TryParseTextBlock(ParserContext context, out IAstNode instr)

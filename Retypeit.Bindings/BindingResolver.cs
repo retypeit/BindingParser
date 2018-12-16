@@ -93,7 +93,7 @@ namespace Retypeit.Scripts.Bindings
         {
             if (expression == null)
                 throw new ArgumentNullException(nameof(expression));
-
+            
             var cache = Cache; // Store in local variable in-case another thread changes the value
             AstRoot root;
 

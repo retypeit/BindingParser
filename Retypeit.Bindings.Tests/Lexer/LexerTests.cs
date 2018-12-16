@@ -196,7 +196,7 @@ namespace Retypeit.Scripts.Bindings.Tests.Lexer
         {
             var lexer = new BindingLexer(BlockStyles.JavaScript);
             var tokens = lexer.Scan("Testing JS blocks: !{1}").ToList();
-            Assert.Equal(4, tokens.Count);
+            Assert.Equal(5, tokens.Count);
         }
 
 

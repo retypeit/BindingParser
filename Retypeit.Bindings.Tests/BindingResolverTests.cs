@@ -481,6 +481,18 @@ namespace Retypeit.Scripts.Bindings.Tests
         }
 
         [Fact]
+        public void Resolve_EmptyScript_ShouldReturnEmptyString()
+        {
+            Assert.Equal("", Run("", new  Dictionary<string, object>()));
+        }
+
+        [Fact]
+        public void Resolve_SingleSpace_ShouldReturnSingleSpaceString()
+        {
+            Assert.Equal(" ", Run(" ", new Dictionary<string, object>()));
+        }
+
+        [Fact]
         public void Resolve_VariableThatDoesNotExist_ShouldThrowAnException()
         {
             Assert.Throws<VariableNotFoundException>(() => Run("{v1}"));
