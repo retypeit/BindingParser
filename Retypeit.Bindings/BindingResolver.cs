@@ -91,6 +91,17 @@ namespace Retypeit.Scripts.Bindings
         /// <returns></returns>
         public object Resolve(string expression, Dictionary<string, object> variables = null)
         {
+            return Resolve(expression, new DictionaryVariableResolver(variables ?? new Dictionary<string, object>()));
+        }
+
+        /// <summary>
+        ///     Resolves strings containing interpolation scripts
+        /// </summary>
+        /// <param name="expression"></param>
+        /// <param name="variables"></param>
+        /// <returns></returns>
+        public object Resolve(string expression, IVariableResolver variables)
+        {
             if (expression == null)
                 throw new ArgumentNullException(nameof(expression));
             

@@ -14,6 +14,10 @@ namespace Retypeit.Scripts.Bindings.Tests
         private object Run(string script, Dictionary<string, object> variables = null)
         {
             var resolver = new BindingResolver {CultureInfo = CultureInfo.InvariantCulture};
+
+            if(variables == null)
+                return resolver.Resolve(script);
+
             return resolver.Resolve(script, variables);
         }
 
@@ -478,18 +482,6 @@ namespace Retypeit.Scripts.Bindings.Tests
         {
             var variables = new Dictionary<string, object> {{"v1", 1}};
             Assert.Equal(1, Run("{v1}", variables));
-        }
-
-        [Fact]
-        public void Resolve_EmptyScript_ShouldReturnEmptyString()
-        {
-            Assert.Equal("", Run("", new  Dictionary<string, object>()));
-        }
-
-        [Fact]
-        public void Resolve_SingleSpace_ShouldReturnSingleSpaceString()
-        {
-            Assert.Equal(" ", Run(" ", new Dictionary<string, object>()));
         }
 
         [Fact]

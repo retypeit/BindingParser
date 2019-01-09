@@ -16,16 +16,16 @@ namespace Retypeit.Scripts.Bindings.Interpreter
     {
         private readonly CultureInfo _culture;
 
-        public ScriptVisitor(Func<FunctionContext, object> functionRunner, Dictionary<string, object> variables = null,
+        public ScriptVisitor(Func<FunctionContext, object> functionRunner, IVariableResolver variables = null,
             CultureInfo culture = null)
         {
             _functionRunner = functionRunner ?? throw new ArgumentNullException(nameof(functionRunner));
-            _variables = variables ?? new Dictionary<string, object>();
+            _variables = variables ?? new DictionaryVariableResolver(new Dictionary<string, object>());
             _culture = culture ?? CultureInfo.CurrentCulture;
         }
 
         private readonly Func<FunctionContext, object> _functionRunner;
-        private readonly Dictionary<string, object> _variables;
+        private readonly IVariableResolver _variables;
 
         public object Visit(VariableNode node)
         {
