@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -34,6 +35,10 @@ namespace Retypeit.Scripts.Bindings.Parser
                     program = currInstr;
             }
 
+            foreach (var token in tokens)
+            {
+                Debug.WriteLine(token);
+            }
             return new AstRoot(program);
         }
 

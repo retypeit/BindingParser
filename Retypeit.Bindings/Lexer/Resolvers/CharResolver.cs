@@ -4,7 +4,7 @@ namespace Retypeit.Scripts.Bindings.Lexer.Resolvers
 {
     public class CharResolver : TokenResolverBase
     {
-        protected override bool DoTryResolve(CharStream stream, HashSet<Token> tokens)
+        protected override bool DoTryResolve(CharStream stream, ICollection<Token> tokens)
         {
             if (stream.Eof)
                 return false;

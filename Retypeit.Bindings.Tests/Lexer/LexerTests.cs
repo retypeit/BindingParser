@@ -39,6 +39,26 @@ namespace Retypeit.Scripts.Bindings.Tests.Lexer
         }
 
         [Fact]
+        public void Scan_ShouldWorkWithEmptyString()
+        {
+            var lexer = new BindingLexer();
+            var result = lexer.Scan("").ToList();
+            Assert.Equal(TokenTypes.TextBlock, result[0].Type);
+            Assert.Equal("", result[0].Value);
+            Assert.Equal(TokenTypes.Eof, result[1].Type);
+        }
+
+        [Fact]
+        public void Scan_ShouldWorkWithNull()
+        {
+            var lexer = new BindingLexer();
+            var result = lexer.Scan(null).ToList();
+            Assert.Equal(TokenTypes.Null, result[0].Type);
+            Assert.Null(result[0].Value);
+            Assert.Equal(TokenTypes.Eof, result[1].Type);
+        }
+
+        [Fact]
         public void Scan_ShouldWorkWithChar()
         {
             var lexer = new BindingLexer();

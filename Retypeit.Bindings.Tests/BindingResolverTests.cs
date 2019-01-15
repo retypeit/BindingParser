@@ -33,6 +33,15 @@ namespace Retypeit.Scripts.Bindings.Tests
         }
 
         [Fact]
+        public void Resolve_EmptyString_ShouldWork()
+        {
+            // Run test
+            var result = Run("");
+            // Evaluate result
+            Assert.Equal("", result);
+        }
+
+        [Fact]
         public void Resolve_AddDateTimeAndString_ShouldReturnStringThatCombinesBothValues()
         {
             // Setup test

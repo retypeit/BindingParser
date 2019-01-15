@@ -19,6 +19,12 @@ namespace Retypeit.Scripts.Bindings.Tests.Parser
         }
 
         [Fact]
+        public void Parse_EmptyString_ShouldWork()
+        {
+            var result = Parse($"");
+        }
+
+        [Fact]
         public void Parse_FunctionWithInvalidNumberOfParameters_ShouldThrowException()
         {
             var methodName = "methodname";

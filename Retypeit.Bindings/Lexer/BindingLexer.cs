@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Retypeit.Scripts.Bindings.Lexer.Resolvers;
 
 namespace Retypeit.Scripts.Bindings.Lexer
@@ -18,7 +20,23 @@ namespace Retypeit.Scripts.Bindings.Lexer
 
         public ICollection<Token> Scan(string expression)
         {
-            var tokens = new HashSet<Token>();
+            var tokens = new List<Token>();
+
+            if (expression == "")
+            {
+                // Handle empty string specifically
+                tokens.Add(new Token(TokenTypes.TextBlock, ""));
+                tokens.Add(new Token(TokenTypes.Eof));
+                return tokens;
+            }
+            else if (expression == null)
+            {
+                // Handle empty null specifically
+                tokens.Add(new Token(TokenTypes.Null, null));
+                tokens.Add(new Token(TokenTypes.Eof));
+                return tokens;
+            }
+
             var stream = new CharStream(expression.ToCharArray());
             while (!stream.Eof)
             {

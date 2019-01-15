@@ -21,7 +21,7 @@ namespace Retypeit.Scripts.Bindings.Lexer.Resolvers
         public TokenTypes Type { get; }
         public string Keyword { get; }
 
-        protected override bool DoTryResolve(CharStream stream, HashSet<Token> tokens)
+        protected override bool DoTryResolve(CharStream stream, ICollection<Token> tokens)
         {
             if (!stream.TryMatch(Keyword, true))
                 return false;

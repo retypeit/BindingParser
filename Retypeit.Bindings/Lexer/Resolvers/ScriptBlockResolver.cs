@@ -45,7 +45,7 @@ namespace Retypeit.Scripts.Bindings.Lexer.Resolvers
             };
         }
 
-        protected override bool DoTryResolve(CharStream stream, HashSet<Token> tokens)
+        protected override bool DoTryResolve(CharStream stream, ICollection<Token> tokens)
         {
             if (stream.Eof)
                 return false;

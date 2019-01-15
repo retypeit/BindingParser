@@ -7,7 +7,7 @@ namespace Retypeit.Scripts.Bindings.Lexer.Resolvers
     /// </summary>
     public abstract class TokenResolverBase : ITokenResolver
     {
-        public bool TryResolve(CharStream stream, HashSet<Token> tokens)
+        public bool TryResolve(CharStream stream, ICollection<Token> tokens)
         {
             var posBeforeMatch = stream.CurrentIndex;
 
@@ -24,6 +24,6 @@ namespace Retypeit.Scripts.Bindings.Lexer.Resolvers
         /// <param name="stream"></param>
         /// <param name="tokens"></param>
         /// <returns></returns>
-        protected abstract bool DoTryResolve(CharStream stream, HashSet<Token> tokens);
+        protected abstract bool DoTryResolve(CharStream stream, ICollection<Token> tokens);
     }
 }

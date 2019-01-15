@@ -15,7 +15,7 @@ namespace Retypeit.Scripts.Bindings.Lexer.Resolvers
             _charsToIgnore = charsToIgnore;
         }
 
-        protected override bool DoTryResolve(CharStream stream, HashSet<Token> tokens)
+        protected override bool DoTryResolve(CharStream stream, ICollection<Token> tokens)
         {
             var result = false;
             while (!stream.Eof)

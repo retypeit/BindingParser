@@ -26,7 +26,7 @@ namespace Retypeit.Scripts.Bindings.Lexer
         {
         }
 
-        public LexerException(string message, HashSet<Token> tokens) : this(message)
+        public LexerException(string message, ICollection<Token> tokens) : this(message)
         {
         }
 

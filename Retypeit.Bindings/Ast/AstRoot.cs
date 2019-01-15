@@ -1,4 +1,5 @@
-﻿using Retypeit.Scripts.Bindings.Interpreter;
+﻿using System;
+using Retypeit.Scripts.Bindings.Interpreter;
 
 namespace Retypeit.Scripts.Bindings.Ast
 {
@@ -8,7 +9,7 @@ namespace Retypeit.Scripts.Bindings.Ast
 
         public AstRoot(IAstNode child)
         {
-            Child = child;
+            Child = child ?? throw new ArgumentNullException(nameof(child));
         }
 
         public object Accept(IVisitor visitor)
